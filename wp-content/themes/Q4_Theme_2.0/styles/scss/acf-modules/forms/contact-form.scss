@@ -1,0 +1,397 @@
+#contact-us-section {
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 2;
+  .inner-wrapper {
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    @include mq(1050px) {
+      width: 90%; //scheduling forms need this
+    }
+    @include mq(880px) {
+      flex-direction: column;
+    }
+    .left-side {
+      width: 40%;
+      padding-right: 50px;
+      @include mq(850px) {
+        padding-right: 75px;
+      }
+      @include mq(770px) {
+        width: 100%;
+        padding-bottom: 50px;
+      }
+      hr {
+        border-top: 7px solid $yellow;
+        border-right: 0;
+        border-left: 0;
+        border-bottom: 0;
+        width: 80px;
+        margin: 0;
+      }
+      h2 {
+        font-size: 42px;
+        margin: 10px 0 15px;
+      }
+      p {
+        margin-bottom: 10px;
+      }
+      .representative {
+        padding-top: 25px;
+        p {
+          margin-bottom: 0;
+        }
+      }
+    }
+    //** Contact Form **//
+    .right-side {
+      width: 60%;
+      @include mq(770px) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.contact-form-wrapper,
+.scheduling-form-inner-wrapper{
+  display: flex;
+  flex-direction: column;
+  max-width: 670px;
+  margin: auto;
+  width: 90%;
+  @include mq(770px){
+    width: 80%;
+  }
+  @include mq(615px){
+    width: 90%;
+  }
+  h2.title {
+    font-size: 32px;
+    font-weight: 400;
+    margin: 50px 0 25px;
+  }
+  .custom-select {
+    position: relative;
+    width: calc(50% - 10px);
+    select {
+      display: none;
+    }
+    .select-selected {
+      border: 2px solid #e7e7e7;
+      margin-top: 22px;
+      &::after {
+        position: absolute;
+        content: "";
+        top: 46px;
+        right: 10px;
+        width: 0;
+        height: 0;
+        border: 6px solid transparent;
+        border-color: $gray transparent transparent transparent;
+        @include mq(550px) {
+          top: 25px;
+        }
+      }
+      &:active,
+      &:focus-within {
+        border: 2px solid $yellow;
+      }
+    }
+    .select-arrow-active {
+      border: 2px solid $yellow !important;
+      &::after {
+        border-color: transparent transparent $gray transparent;
+        top: 40px !important;
+        @include mq(550px){
+          top: 18px !important;
+        }
+      }
+    }
+    .select-items div,
+    .select-selected {
+      color: gray;
+      background: white;
+      padding: 17px 15px;
+      cursor: pointer;
+      user-select: none;
+      border-radius: 4px;
+    }
+    .select-items {
+      position: absolute;
+      background-color: #e7e7e7;
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: 99;
+      div {
+        border: 1px solid #e7e7e7;
+        &:hover{
+          color: $white;
+        }
+      }
+    }
+    .select-hide {
+      display: none;
+    }
+    .select-items div:hover,
+    .same-as-selected {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+  .half-width,
+  .full-width {
+    input, textarea {
+      border: 2px solid #e7e7e7;
+      padding: 15px;
+      border-radius: 4px;
+      margin-bottom: 25px;
+      @include mq(550px) {
+        margin-bottom: 10px;
+      }
+      &:focus {
+        color: $blue;
+        border-color: $yellow;
+        font-weight: 600;
+      }
+    }
+    // .left-half {
+    //   margin-right: 25px;
+    //   @include mq(1330px) {
+    //     margin-right: 8px;
+    //   }
+    //   @include mq(550px) {
+    //     margin-right: 0;
+    //   }
+    // }
+  }
+  .preferred-date {
+    margin-bottom: 40px;
+    @include mq(550px) {
+      margin-bottom: 30px;
+    }
+    .help-text {
+      position: relative;
+      top: 82px;
+      left: 14px;
+      font-style: italic;
+      color: $gray;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+  }
+  .half-width {
+    input, select {
+      width: calc(50% - 37px);
+      @include mq(550px) {
+        width: calc(100% - 34px);
+      }
+    }
+    // .datepicker-wrap{
+    //   float:left;
+    //   width: calc(50% - 42px);
+    //   position: relative;
+    //   @include mq(550px){
+    //     width: calc(100% - 32px);
+    //     float: unset;
+    //   }
+    //   #service-date-picker{
+    //     width: 100%;
+    //   }
+    //
+    // }
+    .custom-select {
+      float: right;
+      margin-right: 8px;
+      @include mq(550px) {
+        width: 100%;
+        float: unset;
+      }
+    }
+  }
+  .full-width {
+    input,
+    textarea {
+      width: calc(100% - 38px);
+      @include mq(550px) {
+        width: calc(100% - 34px);
+      }
+    }
+  }
+  a.form-submit-btn {
+    padding: 15px 0;
+    background: $yellow;
+    color: $blue;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 4px;
+  }
+}
+#gotcha-box {
+  display: none;
+}
+
+// #ui-datepicker-div {
+//   width: 33%;
+//   height: 46%;
+//   min-width: 470px;
+//   background: white;
+//   border-radius: 4px;
+//   filter: drop-shadow(-2px 7px 9px gray);
+//   @include mq(545px) {
+//     width: 90%;
+//     min-width: unset;
+//   }
+//   @include mq(500px) {
+//     height: 35%;
+//   }
+//   .ui-datepicker-header {
+//     width: 83%;
+//     margin: auto;
+//     .ui-datepicker-prev span,
+//     .ui-datepicker-next span {
+//       display: none;
+//     }
+//     .ui-datepicker-prev::before,
+//     .ui-datepicker-next::before {
+//       font-family: FontAwesome;
+//       position: absolute;
+//       top: 33px;
+//       display: flex;
+//       font-weight: normal;
+//       align-items: center;
+//       justify-content: center;
+//       cursor: pointer;
+//     }
+//     .ui-datepicker-prev:before {
+//       left: 60px;
+//       content: "\f100";
+//       @include mq(450px){
+//         left: 35px;
+//       }
+//     }
+//     .ui-datepicker-next::before {
+//       right: 60px;
+//       content: "\f101";
+//       @include mq(450px){
+//         right: 35px;
+//       }
+//     }
+//     .ui-datepicker-title {
+//       font-size: 22px;
+//       font-weight: 600;
+//       text-align: center;
+//       margin: 30px 0;
+//     }
+//   }
+//   .ui-datepicker-calendar {
+//     width: 90%;
+//     margin: auto;
+//     thead {
+//       tr {
+//         th{
+//           color: #ABABAB;
+//         }
+//       }
+//     }
+//   }
+//   tbody {
+//     tr {
+//       td {
+//         text-align: center;
+//         padding: 20px;
+//         border-radius: 50%;
+//         cursor: pointer;
+//         @include mq(500px){
+//           padding: 10px;
+//         }
+//         &:hover {
+//           background: $blue;
+//           transition-duration: 1000ms;
+//           @include mq(500px){
+//             background: unset;
+//           }
+//         }
+//         &:hover > .ui-state-default {
+//           color: $yellow;
+//           opacity: unset;
+//           transition-duration: 1000ms;
+//           @include mq(500px){
+//             background: unset;
+//           }
+//         }
+//         .ui-state-default {
+//           color: $blue;
+//           font-weight: 600;
+//         }
+//       }
+//       .ui-state-disabled {
+//         cursor: auto;
+//         &:hover {
+//           background: #ABABAB;
+//           transition-duration: 1000ms;
+//           @include mq(500px){
+//             background: unset;
+//           }
+//         }
+//         &:hover > .ui-state-default {
+//           color: $white;
+//           transition-duration: 1000ms;
+//           @include mq(500px){
+//             color: #ABABAB;
+//           }
+//         }
+//         .ui-state-default {
+//           color: #ABABAB;
+//           font-weight: 500;
+//         }
+//       }
+//       .ui-datepicker-other-month {
+//         &:hover{
+//           background: none;
+//         }
+//       }
+//     }
+//   }
+//   .ui-datepicker-buttonpane {
+//     display: none;
+//   }
+// }
+
+.form-errors,
+.chatbox-form-errors {
+  padding: 10px 0;
+  li {
+    background: #F9A59D;
+    border: 1px solid red;
+    font-size: 16px;
+    padding: 0 15px;
+    margin: 5px 0;
+    @include border-radius(3px);
+    height: 35px;
+    line-height: 35px;
+    @include mq(945px) {
+      margin: 5px 5%;
+    }
+    @include mq(600px) {
+      margin: 5px 4%;
+    }
+  }
+}
+.form-error,
+.form-success {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+}
+.form-success {
+  color: #009e60;
+  margin: 50px 0;
+  font-size: 25px;
+}
+.form-error {
+  color: red;
+  margin: 50px 0;
+  font-size: 25px;
+}

@@ -1,0 +1,183 @@
+//Utility Bar
+#utility {
+  background: #777;
+  padding: .5em 0;
+  height: 30px;
+  @include mq-max-width(600px) {
+    display: none;
+  }
+  .flex-container {
+    justify-content: flex-end;
+    .desktop-search {
+      display: flex;
+      input {
+        width: 0;
+        padding: 0;
+        border: 0;
+        @include transition(500ms);
+        &.show {
+          width: 300px;
+          padding: 10px 5px;
+          border: 2px solid #777;
+          border-radius: 4px;
+          position: relative;
+          top: -5px;
+          @include transition(500ms);
+        }
+        &:focus {
+          border: 2px solid $primary;
+        }
+      }
+      img {
+        width: 23px;
+        height: 23px;
+        padding: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+// *** MAIN NAV - DESKTOP (MOBILE HAS OWN NAV) *** //
+#main-nav-desktop {
+  display: none;
+  @include mq(1000px) {
+    display: block;
+    &.sticky {
+      position: fixed;
+      top: 0;
+      z-index: 555;
+      width: 100%;
+      box-shadow: 0px 0px 15px #000;
+    }
+  }
+  background: $secondary;
+  .logo-wrapper {
+    width: 20%;
+    img {
+      width: 85px;
+      height: 85px;
+      object-fit: contain;
+    }
+  }
+  .menu-container {
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    ul {
+      display: flex;
+      justify-content: center;
+      li {
+        display: flex;
+        align-items: center;
+        &.menu-item-has-children {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          &.active {
+            background: $primary;
+            color: $secondary;
+            &:after {
+              transform: rotate(180deg);
+              @include transition(500ms);
+            }
+          }
+          &:after {
+            content: '';
+            width: 22px;
+            height: 22px;
+            position: absolute;
+            right: 5px;
+            top: 16px;
+            background-image: url('icons/chevron-down-black.png');
+            background-size: 22px 22px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            filter: invert(1);
+            @include transition(500ms);
+          }
+          // First Sub-Menu
+          ul.sub-menu {
+            display: flex;
+            flex-direction: column;
+            z-index: 5;
+            position: absolute;
+            top: 54px;
+            left: 0;
+            visibility: hidden;
+            opacity: 0;
+            width: 0;
+            height: 0;
+            &.show {
+              width: 300px;
+              height: auto;
+              opacity: 1;
+              visibility: visible;
+              @include transition(500ms);
+            }
+            li {
+              background: $primary;
+              &.menu-item-has-children {
+                &.active {
+                  &:after {
+                    content: '-';
+                    top: 21px;
+                    right: 29px;
+                  }
+                }
+                &:after {
+                  background-image: none;
+                  content: '+';
+                  font-size: 30px;
+                  top: 13px;
+                  right: 27px;
+                }
+              }
+              a {
+                width: calc(100% - 60px);
+                border-top: 2px solid $white;
+                &:hover {
+                  background: $white;
+                  color: $secondary;
+                }
+              }
+            }
+            // Second Sub-Menu //
+            .sub-menu {
+              opacity: 0;
+              visibility: hidden;
+              position: relative;
+              &.show {
+                position: absolute;
+                width: 300px;
+                height: auto;
+                opacity: 1;
+                visibility: visible;
+                left: 300px;
+                top: 56px;
+                li {
+                  background: $secondary;
+                }
+              }
+            }
+          }
+        }
+        a + a {
+          padding-left: 22px !important;
+        }
+        a {
+          font-size: 18px;
+          font-weight: 500;
+          text-transform: uppercase;
+          padding: 18px 30px;
+          color: $white;
+          &:hover {
+            background: $primary;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+// *** MAIN NAV - DESKTOP (MOBILE HAS OWN NAV) *** //

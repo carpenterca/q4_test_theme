@@ -1,0 +1,1887 @@
+{
+    "key": "group_605cef1e96bac",
+    "title": "Masonry Grid",
+    "fields": [
+        {
+            "key": "field_5f8eeadf29cf6",
+            "label": "",
+            "name": "masonry_grid_repeater",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5f8eeb1b29cf7",
+                    "label": "Full Container Height",
+                    "name": "masonry_grid_container_height",
+                    "type": "number",
+                    "instructions": "In pixels",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_5f8eeb4029cf8",
+                    "label": "Left Wrapper Width",
+                    "name": "masonry_grid_left_wrapper_width",
+                    "type": "range",
+                    "instructions": "Left column width in percentage",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "min": 0,
+                    "max": 100,
+                    "step": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_5f8eedb921280",
+                    "label": "Left Side",
+                    "name": "masonry_grid_left_block_content_repeater",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "block",
+                    "button_label": "Add Left Block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f8eedd521281",
+                            "label": "Content Type",
+                            "name": "masonry_grid_left_content_type",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "51",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "img": "Image",
+                                "video": "Video",
+                                "text": "Text",
+                                "text_button": "Text With Button"
+                            },
+                            "default_value": false,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_5fa44fabe8771",
+                            "label": "Object Fit",
+                            "name": "masonry_grid_left_object_fit",
+                            "type": "select",
+                            "instructions": "See for explanation: \r\nhttps:\/\/developer.mozilla.org\/en-US\/docs\/Web\/CSS\/object-fit",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5f8eedd521281",
+                                        "operator": "==",
+                                        "value": "img"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "75",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "contain": "Contain",
+                                "cover": "Cover",
+                                "fill": "Fill",
+                                "none": "None"
+                            },
+                            "default_value": "cover",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_5f99a96922d23",
+                            "label": "Image Link?",
+                            "name": "masonry_grid_image_link_option",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5f8eedd521281",
+                                        "operator": "==",
+                                        "value": "img"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "25",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "yes": "Yes",
+                                "no": "No"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "default_value": "no",
+                            "layout": "horizontal",
+                            "return_format": "value",
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_5f99aa4022d24",
+                            "label": "Image Link",
+                            "name": "masonry_grid_image_link",
+                            "type": "page_link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5f99a96922d23",
+                                        "operator": "==",
+                                        "value": "yes"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": "",
+                            "taxonomy": "",
+                            "allow_null": 0,
+                            "allow_archives": 1,
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_5f8eee2821282",
+                            "label": "Image",
+                            "name": "masonry_grid_left_image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5f8eedd521281",
+                                        "operator": "==",
+                                        "value": "img"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "field": "field_5f8eedd521281",
+                                        "operator": "==",
+                                        "value": "video"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "75",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5fbeb17e5a828",
+                            "label": "Add Mobile Image?",
+                            "name": "masonry_grid_add_mobile_image",
+                            "type": "radio",
+                            "instructions": "If image on mobile differs from desktop image",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5f8eedd521281",
+                                        "operator": "==",
+                                        "value": "img"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "field": "field_5f8eedd521281",
+                                        "operator": "==",
+                                        "value": "video"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "yes": "Yes",
+                                "no": "No"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "default_value": "no",
+                            "layout": "horizontal",
+                            "return_format": "value",
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_5fbeb1dd5a82a",
+                            "label": "Mobile Image",
+                            "name": "masonry_grid_mobile_image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5fbeb17e5a828",
+                                        "operator": "==",
+                                        "value": "yes"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5fbeb21d5a82b",
+                            "label": "Mobile Object Fit",
+                            "name": "masonry_grid_mobile_object_fit",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5fbeb17e5a828",
+                                        "operator": "==",
+                                        "value": "yes"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "contain": "Contain",
+                                "cover": "Cover",
+                                "fill": "Fill",
+                                "none": "None"
+                            },
+                            "default_value": "cover",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_5fbeb2525a82c",
+                            "label": "Mobile Background Color",
+                            "name": "masonry_grid_mobile_img_bg_color",
+                            "type": "color_picker",
+                            "instructions": "When using Contain, this will allow you to see image bg color",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5fbeb17e5a828",
+                                        "operator": "==",
+                                        "value": "yes"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "enable_opacity": false,
+                            "return_format": "string"
+                        },
+                        {
+                            "key": "field_5f8eee9421284",
+                            "label": "Video",
+                            "name": "masonry_grid_left_video",
+                            "type": "file",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5f8eedd521281",
+                                        "operator": "==",
+                                        "value": "video"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "library": "all",
+                            "min_size": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5f8eef1c21287",
+                            "label": "Background Color",
+                            "name": "masonry_grid_box_style_options",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5f8eedd521281",
+                                        "operator": "==",
+                                        "value": "text"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "field": "field_5f8eedd521281",
+                                        "operator": "==",
+                                        "value": "text_button"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "#FFFFFF",
+                            "enable_opacity": false,
+                            "return_format": "string"
+                        },
+                        {
+                            "key": "field_5f8eefc721289",
+                            "label": "Text Color",
+                            "name": "masonry_grid_text_style_options",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5f8eedd521281",
+                                        "operator": "==",
+                                        "value": "text"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "field": "field_5f8eedd521281",
+                                        "operator": "==",
+                                        "value": "text_button"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "#000000",
+                            "enable_opacity": false,
+                            "return_format": "string"
+                        },
+                        {
+                            "key": "field_5f8eeed321285",
+                            "label": "Wysiwyg",
+                            "name": "masonry_grid_left_wysiwyg",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5f8eedd521281",
+                                        "operator": "==",
+                                        "value": "text"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "field": "field_5f8eedd521281",
+                                        "operator": "==",
+                                        "value": "text_button"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_614b5feb0f8d4",
+                            "label": "",
+                            "name": "masonry_left_side_buttons_module_clone",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_60e4ccb9605fd"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_5f8ef0662128c",
+                            "label": "Size",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "left",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_5f8ef0892128d",
+                            "label": "Block Width",
+                            "name": "masonry_grid_block_width",
+                            "type": "range",
+                            "instructions": "Percentage Value",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "min": 0,
+                            "max": 100,
+                            "step": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_5f8ef11a2128e",
+                            "label": "Row Height",
+                            "name": "masonry_grid_row_height",
+                            "type": "range",
+                            "instructions": "Percentage Value",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "min": 0,
+                            "max": 100,
+                            "step": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_5f8ef7ea3a5cc",
+                            "label": "Gutter",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "left",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_5f8ef7fa3a5cd",
+                            "label": "Add Gutter?",
+                            "name": "masonry_grid_add_gutter",
+                            "type": "radio",
+                            "instructions": "This will add spacing between boxes",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "51",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "yes": "Yes",
+                                "no": "No"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "default_value": "no",
+                            "layout": "horizontal",
+                            "return_format": "value",
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_5f8ef8553a5ce",
+                            "label": "Gutter Color",
+                            "name": "masonry_grid_gutter_color",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5f8ef7fa3a5cd",
+                                        "operator": "==",
+                                        "value": "yes"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "#FFFFFF",
+                            "enable_opacity": false,
+                            "return_format": "string"
+                        },
+                        {
+                            "key": "field_5f8ef89e3a5cf",
+                            "label": "",
+                            "name": "masonry_grid_left_gutter_repeater",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5f8ef7fa3a5cd",
+                                        "operator": "==",
+                                        "value": "yes"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "51",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "block",
+                            "button_label": "Add Gutter",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5f8ef8b03a5d0",
+                                    "label": "Gutter Location",
+                                    "name": "masonry_grid_gutter_location",
+                                    "type": "select",
+                                    "instructions": "Side of the box",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "gutter-top": "Top",
+                                        "gutter-bottom": "Bottom",
+                                        "gutter-left": "Left",
+                                        "gutter-right": "Right"
+                                    },
+                                    "default_value": false,
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "return_format": "value",
+                                    "ajax": 0,
+                                    "placeholder": ""
+                                },
+                                {
+                                    "key": "field_5f8ef9083a5d1",
+                                    "label": "Size",
+                                    "name": "masonry_grid_gutter_size_and_location",
+                                    "type": "select",
+                                    "instructions": "Width of space",
+                                    "required": 1,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5f8ef8b03a5d0",
+                                                "operator": "==",
+                                                "value": "gutter-top"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "gutter-top-sm": "Small - 10px",
+                                        "gutter-top-md": "Medium - 15px",
+                                        "gutter-top-lg": "Large - 25px",
+                                        "gutter-top-custom": "Custom"
+                                    },
+                                    "default_value": 0,
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "return_format": "value",
+                                    "ajax": 0,
+                                    "placeholder": ""
+                                },
+                                {
+                                    "key": "field_5f8ef9573a5d4",
+                                    "label": "Size",
+                                    "name": "masonry_grid_gutter_size_and_location",
+                                    "type": "select",
+                                    "instructions": "Width of space",
+                                    "required": 1,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5f8ef8b03a5d0",
+                                                "operator": "==",
+                                                "value": "gutter-bottom"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "gutter-bottom-sm": "Small - 10px",
+                                        "gutter-bottom-md": "Medium - 15px",
+                                        "gutter-bottom-lg": "Large - 25px",
+                                        "gutter-bottom-custom": "Custom"
+                                    },
+                                    "default_value": 0,
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "return_format": "value",
+                                    "ajax": 0,
+                                    "placeholder": ""
+                                },
+                                {
+                                    "key": "field_5f8ef9543a5d3",
+                                    "label": "Size",
+                                    "name": "masonry_grid_gutter_size_and_location",
+                                    "type": "select",
+                                    "instructions": "Width of space",
+                                    "required": 1,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5f8ef8b03a5d0",
+                                                "operator": "==",
+                                                "value": "gutter-left"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "gutter-left-sm": "Small - 10px",
+                                        "gutter-left-md": "Medium - 15px",
+                                        "gutter-left-lg": "Large - 25px",
+                                        "gutter-left-custom": "Custom"
+                                    },
+                                    "default_value": 0,
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "return_format": "value",
+                                    "ajax": 0,
+                                    "placeholder": ""
+                                },
+                                {
+                                    "key": "field_5f8ef94d3a5d2",
+                                    "label": "Size",
+                                    "name": "masonry_grid_gutter_size_and_location",
+                                    "type": "select",
+                                    "instructions": "Width of space",
+                                    "required": 1,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5f8ef8b03a5d0",
+                                                "operator": "==",
+                                                "value": "gutter-right"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "gutter-right-sm": "Small - 10px",
+                                        "gutter-right-md": "Medium - 15px",
+                                        "gutter-right-lg": "Large - 25px",
+                                        "gutter-right-custom": "Custom"
+                                    },
+                                    "default_value": 0,
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "return_format": "value",
+                                    "ajax": 0,
+                                    "placeholder": ""
+                                },
+                                {
+                                    "key": "field_5f8ef9ef3a5d5",
+                                    "label": "Custom Gutter Size",
+                                    "name": "masonry_grid_custom_gutter_top",
+                                    "type": "number",
+                                    "instructions": "Width in pixels",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5f8ef9083a5d1",
+                                                "operator": "==",
+                                                "value": "gutter-top-custom"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "min": "",
+                                    "max": "",
+                                    "step": ""
+                                },
+                                {
+                                    "key": "field_5f8efa9b3a5d6",
+                                    "label": "Custom Gutter Size",
+                                    "name": "masonry_grid_custom_gutter_bottom",
+                                    "type": "number",
+                                    "instructions": "Width in pixels",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5f8ef9573a5d4",
+                                                "operator": "==",
+                                                "value": "gutter-bottom-custom"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "min": "",
+                                    "max": "",
+                                    "step": ""
+                                },
+                                {
+                                    "key": "field_5f8efac03a5d7",
+                                    "label": "Custom Gutter Size",
+                                    "name": "masonry_grid_custom_gutter_left",
+                                    "type": "number",
+                                    "instructions": "Width in pixels",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5f8ef9543a5d3",
+                                                "operator": "==",
+                                                "value": "gutter-left-custom"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "min": "",
+                                    "max": "",
+                                    "step": ""
+                                },
+                                {
+                                    "key": "field_5f8efb013a5d8",
+                                    "label": "Custom Gutter Size",
+                                    "name": "masonry_grid_custom_gutter_right",
+                                    "type": "number",
+                                    "instructions": "Width in pixels",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5f8ef94d3a5d2",
+                                                "operator": "==",
+                                                "value": "gutter-right-custom"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "min": "",
+                                    "max": "",
+                                    "step": ""
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "key": "field_5f8efd4f6516c",
+                    "label": "Right Wrapper Width",
+                    "name": "masonry_grid_right_wrapper_width",
+                    "type": "range",
+                    "instructions": "Right column width in percentage",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "min": 0,
+                    "max": 100,
+                    "step": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_5f8efd986516e",
+                    "label": "Right Side",
+                    "name": "masonry_grid_right_block_content_repeater",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "block",
+                    "button_label": "Add Right Block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f8efd986516f",
+                            "label": "Content Type",
+                            "name": "masonry_grid_right_content_type",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "51",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "img": "Image",
+                                "video": "Video",
+                                "text": "Text",
+                                "text_button": "Text With Button"
+                            },
+                            "default_value": false,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_5fa45203ede30",
+                            "label": "Object Fit",
+                            "name": "masonry_grid_right_object_fit",
+                            "type": "select",
+                            "instructions": "See for explanation: \r\nhttps:\/\/developer.mozilla.org\/en-US\/docs\/Web\/CSS\/object-fit",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5f8eedd521281",
+                                        "operator": "==",
+                                        "value": "img"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "75",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "contain": "Contain",
+                                "cover": "Cover",
+                                "fill": "Fill",
+                                "none": "None"
+                            },
+                            "default_value": "cover",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_5f99bd30aa9c1",
+                            "label": "Image Link?",
+                            "name": "masonry_grid_right_image_link_option",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5f8efd986516f",
+                                        "operator": "==",
+                                        "value": "img"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "25",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "yes": "Yes",
+                                "no": "No"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "default_value": "no",
+                            "layout": "horizontal",
+                            "return_format": "value",
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_5f99bd9caa9c2",
+                            "label": "Image Link",
+                            "name": "masonry_grid_right_image_link",
+                            "type": "page_link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5f99bd30aa9c1",
+                                        "operator": "==",
+                                        "value": "yes"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": "",
+                            "taxonomy": "",
+                            "allow_null": 0,
+                            "allow_archives": 1,
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_5f8efd9865170",
+                            "label": "Image",
+                            "name": "masonry_grid_right_image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5f8efd986516f",
+                                        "operator": "==",
+                                        "value": "img"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "field": "field_5f8efd986516f",
+                                        "operator": "==",
+                                        "value": "video"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "75",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5fbeb2825a82d",
+                            "label": "Add Mobile Image?",
+                            "name": "masonry_grid_add_mobile_image",
+                            "type": "radio",
+                            "instructions": "If image on mobile differs from desktop image",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "yes": "Yes",
+                                "no": "No"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "default_value": "",
+                            "layout": "horizontal",
+                            "return_format": "value",
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_5fbeb28a5a82e",
+                            "label": "Mobile Image",
+                            "name": "masonry_grid_mobile_image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5fbeb2825a82d",
+                                        "operator": "==",
+                                        "value": ""
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5fbeb28d5a82f",
+                            "label": "Mobile Object Fit",
+                            "name": "masonry_grid_mobile_object_fit",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5fbeb2825a82d",
+                                        "operator": "==",
+                                        "value": ""
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "contain": "Contain",
+                                "cover": "Cover",
+                                "fill": "Fill",
+                                "none": "None"
+                            },
+                            "default_value": "cover",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_5fbeb2975a830",
+                            "label": "Mobile Background Color",
+                            "name": "masonry_grid_mobile_img_bg_color",
+                            "type": "color_picker",
+                            "instructions": "When using Contain, this will allow you to see image bg color",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5fbeb2825a82d",
+                                        "operator": "==",
+                                        "value": ""
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "enable_opacity": false,
+                            "return_format": "string"
+                        },
+                        {
+                            "key": "field_5f8efd9865171",
+                            "label": "Video",
+                            "name": "masonry_grid_right_video",
+                            "type": "file",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5f8efd986516f",
+                                        "operator": "==",
+                                        "value": "video"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "library": "all",
+                            "min_size": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5f8efd9865172",
+                            "label": "Background Color",
+                            "name": "masonry_grid_box_style_options",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5f8efd986516f",
+                                        "operator": "==",
+                                        "value": "text"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "field": "field_5f8efd986516f",
+                                        "operator": "==",
+                                        "value": "text_button"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "#FFFFFF",
+                            "enable_opacity": false,
+                            "return_format": "string"
+                        },
+                        {
+                            "key": "field_5f8efd9865173",
+                            "label": "Text Color",
+                            "name": "masonry_grid_text_style_options",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5f8efd986516f",
+                                        "operator": "==",
+                                        "value": "text"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "field": "field_5f8efd986516f",
+                                        "operator": "==",
+                                        "value": "text_button"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "#000000",
+                            "enable_opacity": false,
+                            "return_format": "string"
+                        },
+                        {
+                            "key": "field_5f8efd9865174",
+                            "label": "Wysiwyg",
+                            "name": "masonry_grid_right_wysiwyg",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5f8efd986516f",
+                                        "operator": "==",
+                                        "value": "text"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "field": "field_5f8efd986516f",
+                                        "operator": "==",
+                                        "value": "text_button"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_614b62755f904",
+                            "label": "",
+                            "name": "masonry_left_side_buttons_module_clone",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_60e4ccb9605fd"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_5f8efd9865178",
+                            "label": "Size",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "left",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_5f8efd9865179",
+                            "label": "Block Width",
+                            "name": "masonry_grid_block_width",
+                            "type": "range",
+                            "instructions": "Percentage Value",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "min": 0,
+                            "max": 100,
+                            "step": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_5f8efd986517a",
+                            "label": "Row Height",
+                            "name": "masonry_grid_row_height",
+                            "type": "range",
+                            "instructions": "Percentage Value",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "min": 0,
+                            "max": 100,
+                            "step": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_5f8efd986517b",
+                            "label": "Gutter",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "left",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_5f8efd986517c",
+                            "label": "Add Gutter?",
+                            "name": "masonry_grid_add_gutter",
+                            "type": "radio",
+                            "instructions": "This will add spacing between boxes",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "51",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "yes": "Yes",
+                                "no": "No"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "default_value": "no",
+                            "layout": "horizontal",
+                            "return_format": "value",
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_5f8efd986517d",
+                            "label": "Gutter Color",
+                            "name": "masonry_grid_gutter_color",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5f8efd986517c",
+                                        "operator": "==",
+                                        "value": "yes"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "#FFFFFF",
+                            "enable_opacity": false,
+                            "return_format": "string"
+                        },
+                        {
+                            "key": "field_5f8efd986517e",
+                            "label": "",
+                            "name": "masonry_grid_right_gutter_repeater",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5f8efd986517c",
+                                        "operator": "==",
+                                        "value": "yes"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "51",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "block",
+                            "button_label": "Add Gutter",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5f8efd986517f",
+                                    "label": "Gutter Location",
+                                    "name": "masonry_grid_gutter_location",
+                                    "type": "select",
+                                    "instructions": "Side of the box",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "gutter-top": "Top",
+                                        "gutter-bottom": "Bottom",
+                                        "gutter-left": "Left",
+                                        "gutter-right": "Right"
+                                    },
+                                    "default_value": false,
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "return_format": "value",
+                                    "ajax": 0,
+                                    "placeholder": ""
+                                },
+                                {
+                                    "key": "field_5f8efd9865180",
+                                    "label": "Size",
+                                    "name": "masonry_grid_gutter_size_and_location",
+                                    "type": "select",
+                                    "instructions": "Width of space",
+                                    "required": 1,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5f8efd986517f",
+                                                "operator": "==",
+                                                "value": "gutter-top"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "gutter-top-sm": "Small - 10px",
+                                        "gutter-top-md": "Medium - 15px",
+                                        "gutter-top-lg": "Large - 25px",
+                                        "gutter-top-custom": "Custom"
+                                    },
+                                    "default_value": 0,
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "return_format": "value",
+                                    "ajax": 0,
+                                    "placeholder": ""
+                                },
+                                {
+                                    "key": "field_5f8efd9865181",
+                                    "label": "Size",
+                                    "name": "masonry_grid_gutter_size_and_location",
+                                    "type": "select",
+                                    "instructions": "Width of space",
+                                    "required": 1,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5f8efd986517f",
+                                                "operator": "==",
+                                                "value": "gutter-bottom"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "gutter-bottom-sm": "Small - 10px",
+                                        "gutter-bottom-md": "Medium - 15px",
+                                        "gutter-bottom-lg": "Large - 25px",
+                                        "gutter-bottom-custom": "Custom"
+                                    },
+                                    "default_value": 0,
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "return_format": "value",
+                                    "ajax": 0,
+                                    "placeholder": ""
+                                },
+                                {
+                                    "key": "field_5f8efd9865182",
+                                    "label": "Size",
+                                    "name": "masonry_grid_gutter_size_and_location",
+                                    "type": "select",
+                                    "instructions": "Width of space",
+                                    "required": 1,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5f8efd986517f",
+                                                "operator": "==",
+                                                "value": "gutter-left"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "gutter-left-sm": "Small - 10px",
+                                        "gutter-left-md": "Medium - 15px",
+                                        "gutter-left-lg": "Large - 25px",
+                                        "gutter-left-custom": "Custom"
+                                    },
+                                    "default_value": 0,
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "return_format": "value",
+                                    "ajax": 0,
+                                    "placeholder": ""
+                                },
+                                {
+                                    "key": "field_5f8efd9865183",
+                                    "label": "Size",
+                                    "name": "masonry_grid_gutter_size_and_location",
+                                    "type": "select",
+                                    "instructions": "Width of space",
+                                    "required": 1,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5f8efd986517f",
+                                                "operator": "==",
+                                                "value": "gutter-right"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "gutter-right-sm": "Small - 10px",
+                                        "gutter-right-md": "Medium - 15px",
+                                        "gutter-right-lg": "Large - 25px",
+                                        "gutter-right-custom": "Custom"
+                                    },
+                                    "default_value": 0,
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "return_format": "value",
+                                    "ajax": 0,
+                                    "placeholder": ""
+                                },
+                                {
+                                    "key": "field_5f8efd9865184",
+                                    "label": "Custom Gutter Size",
+                                    "name": "masonry_grid_custom_gutter_top",
+                                    "type": "number",
+                                    "instructions": "Width in pixels",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5f8efd9865180",
+                                                "operator": "==",
+                                                "value": "gutter-top-custom"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "min": "",
+                                    "max": "",
+                                    "step": ""
+                                },
+                                {
+                                    "key": "field_5f8efd9865185",
+                                    "label": "Custom Gutter Size",
+                                    "name": "masonry_grid_custom_gutter_bottom",
+                                    "type": "number",
+                                    "instructions": "Width in pixels",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5f8efd9865181",
+                                                "operator": "==",
+                                                "value": "gutter-bottom-custom"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "min": "",
+                                    "max": "",
+                                    "step": ""
+                                },
+                                {
+                                    "key": "field_5f8efd9865186",
+                                    "label": "Custom Gutter Size",
+                                    "name": "masonry_grid_custom_gutter_left",
+                                    "type": "number",
+                                    "instructions": "Width in pixels",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5f8efd9865182",
+                                                "operator": "==",
+                                                "value": "gutter-left-custom"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "min": "",
+                                    "max": "",
+                                    "step": ""
+                                },
+                                {
+                                    "key": "field_5f8efd9865187",
+                                    "label": "Custom Gutter Size",
+                                    "name": "masonry_grid_custom_gutter_right",
+                                    "type": "number",
+                                    "instructions": "Width in pixels",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5f8efd9865183",
+                                                "operator": "==",
+                                                "value": "gutter-right-custom"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "min": "",
+                                    "max": "",
+                                    "step": ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "page_attributes",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": true,
+    "description": "",
+    "modified": 1645706560
+}

@@ -1,0 +1,66 @@
+.btn {
+  display: inline-block;
+  padding: 1em 2em;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 5px;
+}
+.primary-btn {
+  color: $white;
+  background: $primary;
+  border: 2px solid  $primary;
+  @extend .btn;
+}
+.secondary-btn {
+  color: $white;
+  background: $secondary;
+  border: 2px solid $secondary;
+  @extend .btn;
+}
+
+// OUTLINE BUTTONS //
+.primary-outline {
+  color: $primary;
+  background: none;
+  border: 2px solid  $primary;
+  @extend .btn;
+  &:hover {
+   color: $white;
+   background: $primary;
+  }
+}
+.secondary-outline {
+  color: $secondary;
+  background: none;
+  border: 2px solid $secondary;
+  @extend .btn;
+  &:hover {
+   color: $white;
+   background: $secondary;
+  }
+}
+
+// UNDERLINE BUTTONS //
+.underline {
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-weight: 700;
+  &::after {
+    content: "\25BA";
+    margin-left: 5px;
+    overflow: hidden; //for IE
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    top: 3px;
+  }
+}
+.primary-underline {
+  @extend .underline;
+  color: $primary;
+}
+.secondary-underline {
+  @extend .underline;
+  color: $secondary;
+}

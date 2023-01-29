@@ -1,0 +1,60 @@
+{
+    "key": "group_61f0c1c40d7f9",
+    "title": "Theme Settings - Development",
+    "fields": [
+        {
+            "key": "field_61f0c1d5d0d94",
+            "label": "Editing Options",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_61f0c1fcd0d95",
+            "label": "Enable Frontend Editing Button",
+            "name": "enable_frontend_editing_button",
+            "type": "true_false",
+            "instructions": "Only shows up to logged in Admins",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "On",
+            "ui_off_text": "Off"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-general"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1647542021
+}

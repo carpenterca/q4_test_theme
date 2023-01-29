@@ -1,0 +1,922 @@
+{
+    "key": "group_5ff5db8fd3f10",
+    "title": "Hero Elements",
+    "fields": [
+        {
+            "key": "field_5ff5eafd02472",
+            "label": "Hero Elements Options",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ff5e328aa8f0",
+            "label": "Enable Slick Slider",
+            "name": "enable_slider",
+            "type": "true_false",
+            "instructions": "When this is enabled options will appear on the right. (Slick Slider Options)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "On",
+            "ui_off_text": "Off"
+        },
+        {
+            "key": "field_5ffa95eb1b72f",
+            "label": "Repeat Background",
+            "name": "repeat_background",
+            "type": "true_false",
+            "instructions": "This uses the image from the first hero card and will be used for all other cards.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5ff624a4727d3",
+            "label": "Highlight Color",
+            "name": "highlight_color",
+            "type": "radio",
+            "instructions": "Select the color for title and sub title when a word is wrapped with span tags.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "No Highlight Color",
+                "primary": "Primary",
+                "secondary": "Secondary",
+                "custom": "Custom"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "none : No Highlight Color",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5ff62176ecb4b",
+            "label": "Highlighted Color",
+            "name": "highlighted_color",
+            "type": "color_picker",
+            "instructions": "Select the highlighted color.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ff624a4727d3",
+                        "operator": "==",
+                        "value": "custom"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": false,
+            "return_format": "string"
+        },
+        {
+            "key": "field_5ff5dd7172a4c",
+            "label": "Hero style",
+            "name": "hero_style",
+            "type": "select",
+            "instructions": "Select the Header Style Elements options",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1": "Basic 1 [Background Image | Title | Sub-title]",
+                "2": "Basic 2 [Background Video | Title | Sub-title]",
+                "3": "Basic 3 [Background Color | Title | Sub-title]",
+                "4": "With Button 1 [Background Image | Title | Sub-title | Button]",
+                "5": "With Button 2 [Background Video | Title | Sub-title | Button]",
+                "6": "With Button 3 [Background Color | Title | Sub-title | Button]"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5ff5dbab72a47",
+            "label": "Hero Element Card",
+            "name": "hero_element_repeater",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Card",
+            "sub_fields": [
+                {
+                    "key": "field_5ff5de5b72a4d",
+                    "label": "Background Image",
+                    "name": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5ff5dd7172a4c",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_5ff5dd7172a4c",
+                                "operator": "==",
+                                "value": "4"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "left",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_5ff5dc0f72a48",
+                    "label": "Background image",
+                    "name": "background_image",
+                    "type": "file",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5ff5de8972a4e",
+                    "label": "Background Video",
+                    "name": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5ff5dd7172a4c",
+                                "operator": "==",
+                                "value": "2"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_5ff5dd7172a4c",
+                                "operator": "==",
+                                "value": "5"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "left",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_5ff5dd4c72a4b",
+                    "label": "Background Video",
+                    "name": "background_video",
+                    "type": "file",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5ff5dee472a51",
+                    "label": "Background Color",
+                    "name": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5ff5dd7172a4c",
+                                "operator": "==",
+                                "value": "3"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_5ff5dd7172a4c",
+                                "operator": "==",
+                                "value": "6"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "left",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_5ff5dc7672a4a",
+                    "label": "Background color",
+                    "name": "background_color",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "primary": "Primary",
+                        "secondary": "Secondary",
+                        "custom": "Custom"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_5ff61d025516a",
+                    "label": "Background Custom Color",
+                    "name": "background_custom_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5ff5dc7672a4a",
+                                "operator": "==",
+                                "value": "custom"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": false,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_5ff5e9bdaa1f1",
+                    "label": "Title Text",
+                    "name": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "left",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_5ff61b7f98d33",
+                    "label": "Title Text",
+                    "name": "title_text",
+                    "type": "text",
+                    "instructions": "Add span tags round text you would like to be highlighted (i.e. &lt;span&gt;Highlighted&lt;\/span&gt;)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5ff5e9f4aa1f3",
+                    "label": "Title Text Color",
+                    "name": "title_text_color",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "primary": "Primary",
+                        "secondary": "Secondary",
+                        "custom": "Custom"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_5ff5ea53aa1f4",
+                    "label": "Title Text Custom Color",
+                    "name": "title_text_custom_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5ff5e9f4aa1f3",
+                                "operator": "==",
+                                "value": "custom"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": false,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_5ff61765051ba",
+                    "label": "Sub-Title Text",
+                    "name": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "left",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_5ff61bde98d34",
+                    "label": "Sub Title Text",
+                    "name": "sub_title_text",
+                    "type": "text",
+                    "instructions": "Add span tags round text you would like to be highlighted (i.e. &lt;span&gt;Highlighted&lt;\/span&gt;)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5ff6176d051bb",
+                    "label": "Title Text Color",
+                    "name": "sub_title_text_color",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "primary": "Primary",
+                        "secondary": "Secondary",
+                        "custom": "Custom"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_5ff61772051bc",
+                    "label": "Sub Title Text Custom Color",
+                    "name": "sub_title_text_custom_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5ff6176d051bb",
+                                "operator": "==",
+                                "value": "custom"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": false,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_606610b9fb1fe",
+                    "label": "Button Options",
+                    "name": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5ff5dd7172a4c",
+                                "operator": "==",
+                                "value": "4"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_5ff5dd7172a4c",
+                                "operator": "==",
+                                "value": "5"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_5ff5dd7172a4c",
+                                "operator": "==",
+                                "value": "6"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "left",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_606610f0fb1ff",
+                    "label": "Add Buttons",
+                    "name": "add_buttons_repeater",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "block",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_60661183fb201",
+                            "label": "Button style",
+                            "name": "hero_element_repeater_add_buttons_button_style",
+                            "type": "radio",
+                            "instructions": "CSS Class Name",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "primary-btn": ".Primary-btn",
+                                "secondary-btn": ".Secondary-btn",
+                                "underline-btn": ".Underline-btn",
+                                "outline-btn": ".Outline-btn"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 1,
+                            "save_other_choice": 1,
+                            "default_value": "",
+                            "layout": "horizontal",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_606613245bafd",
+                            "label": "Button Link",
+                            "name": "hero_element_repeater_add_buttons_button_link",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_5ff5dfac72a52",
+            "label": "Color Overlay Options",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ff610b901d4a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ff610b901d4a",
+            "label": "Enable Color Overlay",
+            "name": "enable_color_overlay",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5ff5dedf72a50",
+            "label": "Color Overlay",
+            "name": "color_overlay",
+            "type": "radio",
+            "instructions": "Color overlay will colorize or tint your the hero background",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "no": "No Overlay",
+                "primary": "Primary",
+                "secondary": "Secondary",
+                "custom": "Custom"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "no",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5ff60c426a644",
+            "label": "Custom Color Overlay",
+            "name": "custom_color_overlay",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ff5dedf72a50",
+                        "operator": "==",
+                        "value": "custom"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": false,
+            "return_format": "string"
+        },
+        {
+            "key": "field_5ff5e45b4b11f",
+            "label": "Slick Slider Options",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ff5e328aa8f0",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ff5dc3572a49",
+            "label": "Static Background",
+            "name": "static_background",
+            "type": "true_false",
+            "instructions": "If this is turned on only the image from the first card will be used for all other cards.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5ff5e5024b121",
+            "label": "Slides to Show",
+            "name": "slides_to_show",
+            "type": "number",
+            "instructions": "How many slides to show at once",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5ff5e5924b122",
+            "label": "Slides to Scroll",
+            "name": "slides_to_scroll",
+            "type": "number",
+            "instructions": "How many slides to show at once",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5ff5e4a64b120",
+            "label": "Infinite Scroll",
+            "name": "infinite",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "True",
+            "ui_off_text": "False"
+        },
+        {
+            "key": "field_5ff5e69e4b125",
+            "label": "Fade Transission",
+            "name": "fade_transission",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "True",
+            "ui_off_text": "False"
+        },
+        {
+            "key": "field_5ff5e5e14b123",
+            "label": "Add Dots",
+            "name": "add_dots",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "True",
+            "ui_off_text": "False"
+        },
+        {
+            "key": "field_5ff5e64b4b124",
+            "label": "Autoplay",
+            "name": "autoplay",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "True",
+            "ui_off_text": "False"
+        },
+        {
+            "key": "field_601b188567b2d",
+            "label": "Autoplay Speed",
+            "name": "autoplay_speed",
+            "type": "number",
+            "instructions": "number in milliseconds 1000 = 1 second (delay between slides)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 3000,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post",
+                "operator": "==",
+                "value": "1"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "permalink",
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "page_attributes",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1648236740
+}

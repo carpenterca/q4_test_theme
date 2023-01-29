@@ -1,0 +1,103 @@
+footer {
+  background: $secondary;
+  padding: 3.125em 0;
+  .flex-container {
+    flex-direction: column;
+    @include mq(800px) {
+      justify-content: space-between;
+      flex-direction: row;
+    }
+    .logo-and-company-info-wrapper {
+      max-width: 400px;
+      margin: auto;
+      @include mq(800px) {
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        margin: unset;
+        margin-right: 50px;
+      }
+      .logo-wrapper {
+        margin-bottom: 5px;
+        a {
+          width: 250px;
+          height: auto;
+        }
+      }
+      .company-info {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1em;
+        a {
+          color: $primary;
+          padding-top: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @include mq(800px){
+            justify-content: unset;
+          }
+          &:hover {
+            color: $white;
+          }
+          img {
+            padding-right: 10px;
+            height: 22px;
+            width: 22px;
+          }
+          p {
+            display: inline-block;
+            white-space: nowrap;
+            &.city-state {
+              padding-left: 17px;
+            }
+            &.zip {
+              padding-left: 17px;
+            }
+          }
+        }
+      }
+    }
+    .footer-nav-columns {
+      display: none;
+      @include mq(800px) {
+        width: 16%;
+        display: block;
+      }
+      h3 {
+        color: $primary;
+        font-size: 16px;
+        font-weight: 800;
+        padding-bottom: 5px;
+      }
+      a {
+        line-height: 20px;
+        color: $white;
+        @include transition(500ms);
+        &:hover {
+          color: $primary;
+          @include transition(500ms);
+        }
+      }
+    }
+    .social-links-wrapper {
+      justify-content: center;
+      margin: 1em 0;
+      @include mq(800px){
+        justify-content: unset;
+      }
+    }
+  }
+}
+
+//Bottom Bar
+.bottom-bar {
+  padding: .4em 0;
+  background: #777;
+  p {
+    text-align: center;
+    color: $white;
+    font-size: 14px;
+    font-weight: 200;
+  }
+}

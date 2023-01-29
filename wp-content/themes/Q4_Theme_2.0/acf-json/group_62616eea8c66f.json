@@ -1,0 +1,63 @@
+{
+    "key": "group_62616eea8c66f",
+    "title": "Color Helper",
+    "fields": [
+        {
+            "key": "field_62616f09147d0",
+            "label": "Site Colors",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<div class=\"color-helper-wrapper\">\r\n  <div class=\"color-helper-item\">\r\n    <p>Primary<\/p>\r\n    <span style=\"background-color:#ef402a;\"><\/span>\r\n    <p>#EF402A<\/p> \r\n  <\/div>\r\n  <div class=\"color-helper-item\">\r\n    <p>Secondary<\/p>\r\n    <span style=\"background-color:#212b3c;\"><\/span>\r\n    <p>#212b3c<\/p>\r\n  <\/div>\r\n  <div class=\"color-helper-item\">\r\n    <p>Black<\/p>\r\n    <span style=\"background-color:#1c1c1c;\"><\/span>\r\n    <p>#1c1c1c<\/p>\r\n  <\/div>\r\n  <div class=\"color-helper-item\">\r\n    <p>Gray<\/p>\r\n    <span style=\"background-color:#808080;\"><\/span>\r\n    <p>#808080<\/p>\r\n  <\/div>\r\n<\/div>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "page_attributes",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1650973727
+}

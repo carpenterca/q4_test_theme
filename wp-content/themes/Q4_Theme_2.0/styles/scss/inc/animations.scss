@@ -1,0 +1,107 @@
+.animate {
+  opacity:0;
+  visibility: hidden;
+  &.delay-1 {
+    @include transition-delay(100ms);
+  }
+  &.delay-2 {
+    @include transition-delay(300ms);
+  }
+  &.delay-3 {
+    @include transition-delay(500ms);
+  }
+  &.delay-4 {
+    @include transition-delay(700ms);
+  }
+  &.delay-5 {
+    @include transition-delay(900ms);
+  }
+  &.delay-6 {
+    @include transition-delay(1100ms);
+  }
+  &.delay-7 {
+    @include transition-delay(1300ms);
+  }
+  &.delay-8 {
+    @include transition-delay(1500ms);
+  }
+  &.delay-9 {
+    @include transition-delay(1700ms);
+  }
+  &.delay-10 {
+    @include transition-delay(1900ms);
+  }
+}
+.fade-in {
+  @include transition(750ms);
+}
+.slide-up {
+  @include transition(750ms);
+  @include translate(0, 100px);
+}
+.slide-down {
+  @include transition(750ms);
+  @include translate(0, -100px);
+}
+.slide-right {
+  @include transition(1750ms);
+  @include translate(-500px, 0);
+}
+.slide-left {
+  @include transition(750ms);
+  @include translate(100px, 0);
+}
+.grow {
+  @include transition(750ms);
+  @include scale(0.2);
+}
+.shrink {
+  @include transition(750ms);
+  @include scale(1.3);
+}
+
+.inviewport {
+  &.fade-in {
+    opacity:1;
+    visibility: visible;
+  }
+  &.slide-up {
+    opacity:1;
+    visibility: visible;
+    @include translate(0,0);
+  }
+  &.slide-down {
+    opacity:1;
+    visibility: visible;
+    @include translate(0,0);
+  }
+  &.slide-right {
+    opacity:1;
+    visibility: visible;
+    @include translate(0,0);
+  }
+  &.slide-left {
+    opacity:1;
+    visibility: visible;
+    @include translate(0,0);
+  }
+  &.grow {
+    opacity:1;
+    visibility:visible;
+    @include scale(1);
+  }
+  &.shrink {
+    opacity:1;
+    visibility:visible;
+    @include scale(1);
+  }
+}
+
+@keyframes scale {
+  0%, 100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}

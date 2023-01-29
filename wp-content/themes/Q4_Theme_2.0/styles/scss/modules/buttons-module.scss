@@ -1,0 +1,31 @@
+.buttons-module {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 1366px;
+  text-align: center;
+  @include mq(600px) {
+    display: block;
+  }
+  .button-2 {
+    margin-top: 10px;
+    @include mq(600px){
+      margin-left: 10px;
+      margin-top: 0;
+    }
+  }
+  .button-3 {
+    margin-top: 10px;
+    @include mq(600px){
+      margin-left: 10px;
+      margin-top: 0;
+    }
+  }
+  .button-4 {
+    margin-top: 10px;
+    @include mq(600px){
+      margin-left: 10px;
+      margin-top: 0;
+    }
+  }
+}

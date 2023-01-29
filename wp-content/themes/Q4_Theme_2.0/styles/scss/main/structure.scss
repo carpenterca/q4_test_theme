@@ -1,0 +1,23 @@
+html {
+  scroll-behavior: smooth;
+}
+.container {
+  width: 90%;
+  max-width: 1366px;
+  margin: auto;
+  @include mq(1000px) {
+    width: 80%;
+  }
+}
+.flex-container {
+  width: 90%;
+  max-width: 1366px;
+  margin: auto;
+  display: flex;
+  @include mq(1000px) {
+    width: 80%;
+  }
+}
+#single-post > .inner-wrapper {
+  width: 50%;
+}

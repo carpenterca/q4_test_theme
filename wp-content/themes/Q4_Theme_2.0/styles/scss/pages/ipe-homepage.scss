@@ -1,0 +1,366 @@
+#ipe-hero-section {
+  .column {
+    padding: unset;
+  }
+  .hero-slider {
+    position: relative;
+    img {
+      filter: brightness(.7);
+    }
+    .hero-text-and-buttons-wrapper {
+      h1 {
+        font-size: 145px;
+        font-weight: 800;
+        text-align: right;
+      }
+      h2 {
+        font-size: 75px;
+        position: absolute;
+        bottom: 45px;
+        right: 0;
+      }
+      .buttons-module {
+        text-align: right;
+        a {
+          margin-right: unset;
+          position: relative;
+          bottom: -10px;
+          background: #fdb915;
+          border-color: #fdb915;
+          color: black;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+  .slick-dots {
+    z-index: 555555;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    @include translate(-50%,-50%);
+    .slick-active {
+      button {
+        border: 3px solid #FDB915;
+    background: #FDB915;
+      }
+    }
+    li {
+      display: inline-block;
+      margin: 0 5px;
+      cursor: pointer;
+      button {
+        border: 3px solid #808080;
+        background: #808080;
+        display: block;
+        outline: none;
+        height: 20px;
+        width: 20px;
+        line-height: 0px;
+        font-size: 0px;
+        color: #0000;
+        padding: 5px;
+      }
+    }
+  }
+}
+
+#ipe-page-preview-section {
+  .full-width-container {
+    .column {
+      display: flex;
+      align-items: center;
+      .image-module {
+        .image-wrapper {
+          height: 75px;
+          width: 75px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+      .two-color-header {
+        margin: 0 25px 0 15px;
+        .left-text {
+          h2 {
+            font-size: 20px;
+          }
+        }
+        .right-text {
+          h2 {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+#the-right-equipment-section {
+  .full-width-container {
+    padding: 3.125em 0;
+    @include mq(650px){
+      height: 275px;
+    }
+    .column {
+      // Left black box
+      &.color-background {
+        border-left: 10px solid #fbb416;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2em;
+        .two-color-header {
+          h2 {
+            font-size: 36px;
+          }
+        }
+        .text-box-text  {
+          position: unset;
+          transform: unset;
+        }
+      }
+      // Three right image boxes
+      &.image-background {
+        position: relative;
+        transition: all .2s ease-in-out;
+        &:hover {
+          transform: scale(1.1);
+          z-index: 5;
+        }
+        h2 {
+          position: absolute;
+          top: 245px;
+          padding-left: 1.3em;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+
+#ipe-services-section {
+  padding: 3.125em 0;
+  position: relative;
+  .full-width-container {
+    .column + .column {
+      margin-left: 20px;
+    }
+    .column {
+      position: relative;
+      &.no-background {
+        // position: absolute;
+        // top:0;
+      }
+      &.color-background {
+        position: relative;
+        overflow: hidden;
+        min-height: 200px;
+        &:before {
+          top: 15px;
+          left: 15px;
+          position: absolute;
+          font-size: 50px;
+          font-weight: 900;
+          opacity: .5;
+          color: white;
+        }
+        &:after {
+          content: '';
+          background: url('images/tire-marks.png');
+          position: absolute;
+          background-position: center;
+          background-size: cover;
+          min-width: 350px;
+          min-height: 280px;
+          top: -54px;
+          left: -3px;
+          opacity: .25;
+        }
+        h2 {
+          font-size: 28px;
+          position: absolute;
+          top: 150px;
+          padding: 0 15px;
+        }
+      }
+      &.column-3 {
+        &:before {
+          content: '01';
+        }
+      }
+      &.column-5 {
+        &:before {
+          content: '02';
+        }
+      }
+      &.column-7 {
+        &:before {
+          content: '03';
+        }
+      }
+      .image-module {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        .image-wrapper {
+          height: 55px;
+          width: 55px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+      .buttons-module {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        @include translate(-50%,-30%);
+        a {
+          color: white;
+          border-radius: 0;
+          width: 70%;
+          &.primary-outline {
+            border-color: #fdb915;
+          }
+          &.secondary-outline {
+            border-color: #1b1b1b;
+          }
+        }
+      }
+    }
+  }
+}
+
+#ipe-marquee-section {
+  flex-direction: column;
+  .column {
+    &.column-3 {
+      padding: unset;
+    }
+  }
+  .text-box-text {
+    font-size: 57px;
+  }
+  #marquee {
+    background: white;
+    padding-bottom: 6.125em;
+    .message {
+      ul {
+        display: flex;
+        li {
+          padding: 0 1.5em;
+          font-size: 36px !important;
+          font-weight: 500 !important;
+          text-transform: uppercase;
+          &:after {
+            content: "ꔷ" !important;
+            margin-left: 32px !important;
+            color: #FDB915 !important;
+          }
+        }
+      }
+      img {
+        position: absolute;
+        top: -6px;
+        left: -10px;
+      }
+    }
+  }
+}
+
+#ipe-our-team-section {
+  .full-width-container {
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    &:after {
+      content: '';
+      background-image: url('images/tire-marks.png');
+      position: absolute;
+      background-position: center;
+      background-size: cover;
+      height: 1000px;
+      width: 1000px;
+      transform: rotate(-48deg);
+      top: -191px;
+      left: -290px;
+      opacity: .25;
+    }
+    &:before {
+      content: '';
+      background-image: url('images/ipe-logo-grey.png');
+      position: absolute;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-width: 350px;
+      min-height: 280px;
+      right: -129px;
+      top: 400px;
+      opacity: .38;
+      mix-blend-mode: exclusion;
+      z-index: 1;
+    }
+    .video-wrapper {
+      position: relative;
+      top: -85px;
+      z-index: 5;
+      video {
+        border: 15px solid #FDB915;
+        width: calc(100% - 30px);
+
+      }
+    }
+    .column-3,
+    .column-5 {
+      top: -100px;
+      z-index: 55;
+    }
+    .buttons-module {
+      width: unset;
+      text-align: left;
+      margin-top: 10px;
+      .primary-btn {
+        background: #fdb915;
+        border-radius: 0;
+        border: 2px solid #fdb915;
+        color: $black;
+      }
+    }
+    .wysiwyg-module {
+      span {
+        color: #fdb915;
+      }
+    }
+  }
+}
+
+#ipe-deals-section {
+  padding: 3.125em 0;
+  .column + .column {
+    margin-left: 25px;
+  }
+  .column {
+    height: 400px;
+    .wysiwyg-module {
+      position: unset;
+      left: unset;
+      top: unset;
+      transform: none;
+      * {
+        position: static;
+      }
+      h2 {
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        @include translate(-50%,-50%);
+      }
+    }
+  }
+}

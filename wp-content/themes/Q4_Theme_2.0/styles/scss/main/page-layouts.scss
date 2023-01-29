@@ -1,0 +1,90 @@
+section.row {
+  width: 90%;
+  margin: 0 auto;
+  @include mq(650px) {
+    display: flex;
+    width: 80%;
+  }
+  @include mq-max-width(650px){
+    //Removes section height if set in WP Backend //
+    height: unset !important;
+  }
+  &.full-width {
+    width: 100%;
+  }
+  &.full-width-with-container {
+    width: 100%;
+    .full-width-container {
+      width: 90%;
+      margin: 0 auto;
+      @include mq(650px){
+        width: 80%;
+        display: flex;
+      }
+    }
+  }
+  // SECTION IMAGE/VIDEO BACKGROUND
+  &.image-background,
+  &.video-background {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    .buttons-module,
+    .wysiwyg_module,
+    .text-box-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include translate(-50%, -50%);
+    }
+    video {
+      width: 100%;
+    }
+  }
+  .column {
+    padding: 2em 0;
+    position: relative;
+    // Don't change unless changing for whole site. This adds to all columns. Use specific class/id on column to target if needed for specific column.  //
+    @include mq-max-width(650px) {
+      width: 100% !important;
+    }
+    .clickable-column-link {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      z-index: 3;
+      top: 0;
+    }
+    // COLUMN IMAGE/VIDEO BACKGROUND
+    &.image-background,
+    &.video-background {
+      padding: 0;
+      position: relative;
+      margin: 0 auto;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      h1, h2, h3, p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        @include translate(-50%,-50%);
+      }
+      //Centers wysiwyg only on image/video backgrounds
+      .wysiwyg-module {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include translate(-50%,-50%);
+        * {
+          position: relative;
+        }
+      }
+    }
+  }
+}

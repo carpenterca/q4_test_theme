@@ -1,0 +1,119 @@
+.slick-slider-module {
+  // Main Image Slider
+  .featured-image {
+    margin-bottom: 15px;
+    .slick-slide {
+      > div {
+        .video-wrapper {
+          height: 100%;
+        }
+        img, video {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  // Thumbnail Slider
+  .slider-nav,
+  .specialty-project-slider-nav  {
+    .slick-slide {
+      margin: 0 5px;
+      cursor: pointer;
+      > div {
+        .video-wrapper {
+          position: relative;
+          .fa-play-circle {
+            position: absolute;
+            @include translate(-50%,-50%);
+            top: 50%;
+            left: 50%;
+            &::before {
+              color: $white;
+              opacity: .7;
+              font-size: 45px;
+            }
+          }
+        }
+        > div {
+          height: 100px;
+          @include mq(1250px){
+            height: 115px;
+          }
+          @include mq(500px){
+            height: 100px;
+          }
+          img, video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+    .slick-dots {
+      display: flex;
+      justify-content: center;
+      .slick-active {
+        &:after {
+          color: $primary;
+        }
+      }
+      li {
+        cursor: pointer;
+        &:after {
+          content: '\2014';
+          font-size: 50px;
+          margin: 0 5px;
+          color: gray;
+          @include mq(450px){
+            font-size: 40px;
+          }
+        }
+        button {
+         font-size: 0;
+         line-height: 0;
+         display: block;
+         width: 20px;
+         height: 20px;
+         padding: 5px;
+         cursor: pointer;
+         color: transparent;
+         border: 0;
+         outline: none;
+         background: transparent;
+        }
+      }
+    }
+  }
+  .slick-previous-btn,
+  .slick-next-btn {
+    background: $primary;
+    padding: 5em;
+    border-radius: 50%;
+    position: absolute;
+    border: 0;
+    cursor: pointer;
+    z-index: 3;
+    > div {
+      width: 50px;
+      height: 50px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+  .slick-previous-btn {
+    left: 2%;
+    > div {
+      background-image: url('icons/arrow-left-white.png');
+    }
+  }
+  .slick-next-btn {
+    right: 2%;
+    > div {
+      background-image: url('icons/arrow-right-white.png');
+    }
+  }
+}

@@ -1,0 +1,12 @@
+// Used for Header and Footer Social Links
+.social-links-wrapper {
+  display: flex;
+  .social-links {
+    display: inline;
+    padding: .3em .2em;
+    img {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}

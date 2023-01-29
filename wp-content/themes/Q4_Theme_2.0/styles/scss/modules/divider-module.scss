@@ -1,0 +1,11 @@
+.divider-module {
+  padding: 10px 0;
+  position: relative;
+  z-index: 2;
+  hr {
+    border: 0;
+    margin: 0;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+}

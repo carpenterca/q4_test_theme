@@ -1,0 +1,267 @@
+.web-form{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  // position: relative;
+  .element-wrapper {
+    &.width-50 {
+      width: 100%;
+      margin-bottom: 1.2em;
+      @include mq(600px){
+        width: calc(50% - 1em);
+      }
+    }
+    &.width-100 {
+      width: 100%;
+      margin-bottom: 1.2em;
+    }
+    input, textarea {
+      border: .15em solid $gray;
+      padding: 1em;
+      border-radius: .3em;
+      width: calc(100% - 2.3em);
+      // @include mq(650px) {
+      //   width: calc(100% - 33px);
+      // }
+      &::placeholder {
+        color: $gray !important;
+      }
+      &:focus {
+        border-color: $primary;
+        font-weight: 500;
+      }
+    }
+    label{
+      font-weight: 600;
+      color: $black;
+      font-size: 1em;
+      display: block;
+      margin: 0 0 .3em .6em;
+      span{
+        color:  #ee6352;
+        font-weight: 200;
+      }
+    }
+  }
+  .required-text,
+  .required-select,
+  .required-textarea {
+    position: relative;
+    &:before{
+      content: "*";
+      position: absolute;
+      top: -.3em;
+      left: 0;
+      color: $primary;
+      font-size: 1.1em;
+    }
+  }
+  .required-select {
+    &:before {
+      top: .5em;
+      left: 1.2em;
+    }
+  }
+  #file-attachment-button {
+    @extend .btn;
+    background: $primary;
+    border: 2px solid $primary;
+    color: $white;
+    margin: 15px 0 0;
+    &:hover {
+      background: none;
+      color: $gray;
+    }
+  }
+  #file-attachment-element{
+    display: none;
+  }
+  .file-upload-list {
+    position: relative;
+    bottom: 0;
+    .file-upload-list-item {
+      display: flex;
+      justify-content: space-between;
+      margin: 1em 0 0;
+      align-items: center;
+      overflow: hidden;
+      border-radius: 5px;
+      border: 2px solid $gray;
+      span{
+        margin-left: 15px;
+      }
+      .upload-file-status{
+        #upload-file-icon{
+          object-fit: cover;
+          width: 35px;
+          height: 35px;
+        }
+      }
+      .upload-file-remove{
+        cursor: pointer;
+        background: $primary;
+        color:white;
+        font-weight: 400;
+        padding: 10px;
+      }
+    }
+  }
+
+
+  .select-wrapper {
+    position: relative;
+    height: 2.8em;
+    border: .15em solid $gray;
+    border-radius: 40px;
+    cursor: pointer;
+    &::after {
+      content: '';
+      position: absolute;
+      right: 1.3em;
+      top: 1em;
+      width: 0;
+      height: 0;
+      border-right: 10px solid #0000;
+      border-top: 10px solid $gray;
+      border-left: 10px solid #0000;
+      @include transition(500ms);
+    }
+    &.active {
+      border-color: $primary;
+      &::after {
+        // top: 1em;
+        transform: rotate(180deg);
+        border-top: 10px solid #767676;
+        @include transition(500ms);
+      }
+    }
+    .select-value {
+      color: $gray;
+      position: relative;
+      font-weight: 400;
+      top: 13px;
+      left: 30px;
+    }
+    .select-options {
+      position: absolute;
+      border: .15em solid $gray;
+      border-radius: .3em;
+      width: 100%;
+      top: 3.1em;
+      z-index: -1;
+      opacity: 0;
+      visibility: hidden;
+      @include transition(500ms);
+      &.active {
+        opacity: 1;
+        z-index: 2;
+        visibility: visible;
+        background: $white;
+        @include transition(500ms);
+      }
+      li {
+        border-bottom: 1px solid gray;
+        padding:15px;
+        font-weight: 400;
+        &:hover {
+          background: $primary;
+          color: $white;
+          @include transition(500ms);
+        }
+      }
+    }
+  }
+
+  #web-form-submit {
+    @extend .btn;
+    color: $white;
+    background: $primary;
+    border: 2px solid $primary;
+    margin-top: 15px;
+    @include mq(400px){
+      width: 315px;
+    }
+    &:hover {
+      border-color: $gray;
+      color: $gray;
+      background: none;
+      @include transition(500ms);
+    }
+  }
+  #validatepassword{
+    display: none;
+  }
+  #file-upload-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 30em;
+    padding: 2rem;
+    box-shadow: 0 10px 30px #2C303A;
+    background: #e3e3e3;
+    border-radius: 6px;
+    justify-content: center;
+    z-index: 1;
+    #file-upload-modal-message {
+      color: $black;
+      display: inline;
+      text-align: center;
+      width: 100%;
+      #file-upload-modal-filename {
+        color: $black;
+        display: inline;
+        margin-right: 1px;
+      }
+    }
+    button {
+      padding: .5em 1.5em;
+      margin-top: 1em;
+      &#file-upload-cancel {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .error {
+    border: 2px solid #EF402A !important;
+    background-color: lighten(#FF3C28, 22%) !important;
+  }
+  .form-errors {
+    padding: 10px 0;
+    li {
+      background: #F9A59D;
+      border: 1px solid red;
+      font-size: 16px;
+      padding: 0 15px;
+      margin: 5px 0;
+      height: 35px;
+      line-height: 35px;
+      @include mq(945px) {
+        margin: 5px 5%;
+      }
+      @include mq(600px) {
+        margin: 5px 4%;
+      }
+    }
+  }
+  .form-error,
+  .form-success {
+    width: 100%;
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .form-success {
+    color: #009e60;
+    margin: 20px 0;
+    font-size: 25px;
+  }
+  .form-error {
+    color: red;
+    margin: 50px 0;
+    font-size: 25px;
+  }
+}

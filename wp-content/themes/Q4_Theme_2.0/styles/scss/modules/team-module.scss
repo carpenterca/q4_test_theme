@@ -1,0 +1,70 @@
+.team-module {
+  margin: 3.125em 0;
+  @include mq(500px){
+    display: flex;
+    flex-wrap: wrap;
+  }
+    .team-card {
+      margin-bottom: 1.5em;
+      @include mq(500px){
+        width: calc(50% - 17px);
+        margin-left: 25px;
+      }
+      @include mq(800px){
+        width: calc(33.333% - 17px);
+      }
+      @include mq(1000px){
+        width: calc(25% - 17px);
+      }
+      &:nth-of-type(1) {
+        margin-left: 0 !important;
+      }
+      &:nth-of-type(odd) {
+        @include mq(500px){
+          margin-left: 0;
+        }
+        @include mq(800px){
+          margin-left: auto;
+        }
+      }
+      &:nth-of-type(4) {
+        @include mq(800px){
+          margin-left: 0;
+        }
+        @include mq(1000px){
+          margin-left: auto;
+        }
+      }
+      &:nth-of-type(5) {
+        @include mq(800px) {
+          margin-left: 25px;
+        }
+        @include mq(1000px) {
+          margin-left: 0;
+        }
+      }
+      .name-and-title {
+        margin: .3em 0 0;
+        h3 {
+          font-size: 20px;
+        }
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+    a.linked-in {
+      width: 22px;
+      height: 22px;
+      display: block;
+      border: 2px solid $black;
+      border-radius: 9px;
+      padding: .2em;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+// }

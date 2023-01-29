@@ -1,0 +1,132 @@
+#news-single {
+  // Hero Section
+  .news-single-banner {
+    position: relative;
+    height: 500px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include translate(-50%,-50%);
+      h2 {
+        color: springgreen;
+        font-size: 22px;
+        font-weight: 300;
+        @include mq-max-width(500px){
+          font-size: 26px;
+        }
+      }
+      h1 {
+        color: $white;
+        max-width: 800px;
+        font-size: 42px;
+        @include mq-max-width(500px){
+          font-size: 50px;
+        }
+      }
+    }
+  }
+  // Post Body Section
+  .post-body {
+    padding: 3.125em 0;
+    .container {
+      .text {
+        margin-top: 25px;
+        p {
+          padding:.5em 0;
+        }
+      }
+    }
+  }
+  // Additional News Section
+  #additional-news-section {
+    padding: 3.125em 0;
+    background: $primary;
+    .container {
+      flex-direction: column;
+      h3 {
+        color: $grayishblue;
+        margin-bottom: 1em;
+      }
+      .additional-news-list {
+        position: relative;
+        .slick-slide {
+          margin-right: 15px;
+          .image-background,
+          .color-background,
+          .default-color-background {
+            height: 215px;
+            width: auto;
+            margin-bottom: 15px;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          h4 {
+            font-size: 20px;
+            color: $white;
+          }
+          p {
+            color: $gray;
+          }
+          h5 {
+            color: $white;
+            font-size: 16px;
+            padding: 10px 0 5px;
+            font-weight: 300;
+          }
+        }
+        .slick-next,
+        .slick-prev {
+          position: absolute;
+          background: $secondary;
+          color: $white;
+          font-size: 23px;
+          border-radius: 50%;
+          bottom: 50%;
+          cursor: pointer;
+          @include translate(-50%,-50%);
+        }
+        .slick-prev {
+          left: -65px;
+          padding: 10px 15px 10px 10px;
+        }
+        .slick-next {
+          right: -90px;
+          padding: 10px 10px 10px 15px;
+        }
+        .slick-dots {
+          display: flex;
+          justify-content: center;
+          position: relative;
+          bottom: -25px;
+          li {
+            &:after {
+              content: '\2014';
+              font-size: 50px;
+              color: #777;
+              margin: 0 2px;
+            }
+            &.slick-active {
+              &:after {
+                content: '\2014';
+                color: $secondary;
+              }
+            }
+            // removes default slick slider pagination buttons
+            button {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,141 @@
+#rj-cylinder-hero-section {
+  .column {
+    padding: unset;
+    .hero-text-and-buttons-wrapper {
+      h1,h2 {
+        text-align: left;
+        font-weight: 500;
+      }
+      h1 {
+        font-size: 70px;
+        }
+      h2 {
+        font-size: 72px;
+      }
+      .buttons-module {
+        text-align: left;
+      }
+    }
+  }
+}
+
+#rj-page-three-column-section {
+  .column + .column {
+    margin-left: 15px;
+  }
+  .column {
+    position: relative;
+    h2 {
+      font-size: 27px;
+      color: #1B41B7;
+      background: white;
+      width: unset;
+      padding: 20px 40px;
+      font-style: italic;
+      font-weight: 900;
+      &:before {
+        content: '';
+        width: 100%;
+        height: 10px;
+        border-top: 10px solid #fff;
+        position: absolute;
+        top: -15px;
+        left: 0;
+      }
+    }
+  }
+  .buttons-module {
+    position: absolute;
+    bottom: 0;
+    background: #142aa880;
+    padding: 25px 0;
+    width: 100%;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+#one-stop-shop-section {
+  flex-wrap: wrap;
+  .full-width-container {
+    display: flex;
+    flex-wrap: wrap;
+    .two-color-header {
+      text-align: center;
+      position: relative;
+      .left-text {
+        h2 {
+          font-size: 75px;
+        }
+      }
+      .right-text {
+        h2 {
+          font-size: 40px;
+
+        }
+      }
+    }
+    .buttons-module {
+      top: 110%;
+    }
+    .no-background {
+      display: flex;
+      padding-top: 8em;
+      .image-module {
+        margin-right: .8em;
+        .image-wrapper {
+          height: 55px;
+          width: 60px;
+          background: #1B41B7;
+          padding: 5px;
+        }
+      }
+      .wysiwyg-module {
+        h2 {
+          font-size: 32px;
+          color: #333 !important;
+        }
+        h3{
+          margin-bottom: 10px;
+          position: relative;
+          color: #7E8288;
+          line-height: 17px;
+          font-size: 17px;
+          font-weight: 400;
+        }
+        a {
+          color: #7e8288;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+#rj-cylinder-cta-section {
+  .full-width-container {
+    display: flex;
+    .two-color-header {
+      border-left: 5px solid $black;
+      padding-left: 10px;
+      h2 {
+        font-size: 44px;
+      }
+    }
+    .buttons-module {
+      margin: 15px auto 0;
+      text-align: left;
+      width: unset;
+    }
+  }
+}
+
+.test-image {
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

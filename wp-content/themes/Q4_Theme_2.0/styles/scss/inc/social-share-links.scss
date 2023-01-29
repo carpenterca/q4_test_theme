@@ -1,0 +1,30 @@
+.news-share {
+  .news-share-header {
+    color: $secondary;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+  .share-links {
+    display: flex;
+    a {
+      width: 29px;
+      height: 29px;
+      margin-right: 5px;
+      @include transition(500ms);
+      &:hover {
+        opacity: .7;
+        @include transition(500ms);
+      }
+    }
+    i {
+      font-size: 29px;
+      color: #0E121A;
+      @include transition(500ms);
+      &:hover {
+        opacity: .7;
+        @include transition(500ms);
+      }
+    }
+  }
+}

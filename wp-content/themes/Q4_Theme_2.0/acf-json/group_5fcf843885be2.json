@@ -1,0 +1,689 @@
+{
+    "key": "group_5fcf843885be2",
+    "title": "Overlay Module",
+    "fields": [
+        {
+            "key": "field_6058fdf7f37f7",
+            "label": "Overlay Options",
+            "name": "overlay_module_options",
+            "type": "select",
+            "instructions": "Left \/ Right - Set Left and\/or Right width and Top and\/or bottom positions || \r\nWhole Section - Overlay the whole section",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6053af510dd8c",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "51",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "left-right-positions": "Left \/ Right",
+                "whole-section": "Whole Section"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_6053af020dd8a",
+            "label": "Left Top",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6058fdf7f37f7",
+                        "operator": "==",
+                        "value": "left-right-positions"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6053af510dd8c",
+            "label": "Left Top Color",
+            "name": "overlay_module_left_top_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6058fdf7f37f7",
+                        "operator": "==",
+                        "value": "left-right-positions"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": false,
+            "return_format": "string"
+        },
+        {
+            "key": "field_6053af880dd8d",
+            "label": "Opacity",
+            "name": "overlay_module_left_top_opacity",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6058fdf7f37f7",
+                        "operator": "==",
+                        "value": "left-right-positions"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": 10,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6053b4580dd8f",
+            "label": "Width (% of screen)",
+            "name": "overlay_module_left_top_width",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6058fdf7f37f7",
+                        "operator": "==",
+                        "value": "left-right-positions"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_6053b75f0dd90",
+            "label": "Height",
+            "name": "overlay_module_left_top_height",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6058fdf7f37f7",
+                        "operator": "==",
+                        "value": "left-right-positions"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_6059056df37f8",
+            "label": "Left Bottom",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6058fdf7f37f7",
+                        "operator": "==",
+                        "value": "left-right-positions"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6059057cf37f9",
+            "label": "Left Bottom Color",
+            "name": "left_bottom_overlay_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6058fdf7f37f7",
+                        "operator": "==",
+                        "value": "left-right-positions"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": false,
+            "return_format": "string"
+        },
+        {
+            "key": "field_605905a3f37fa",
+            "label": "Opacity",
+            "name": "left_bottom_overlay_opacity",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6058d063d8e7c",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": 10,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_605906c1f37fc",
+            "label": "Width (% of screen)",
+            "name": "left_bottom_overlay_width",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6058fdf7f37f7",
+                        "operator": "==",
+                        "value": "left-right-positions"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_605906d2f37fd",
+            "label": "Height",
+            "name": "left_bottom_overlay_height",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6058fdf7f37f7",
+                        "operator": "==",
+                        "value": "left-right-positions"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_6053af420dd8b",
+            "label": "Right Top",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6058fdf7f37f7",
+                        "operator": "==",
+                        "value": "left-right-positions"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6053b7c70dd91",
+            "label": "Right Top Color",
+            "name": "right_top_overlay_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6058fdf7f37f7",
+                        "operator": "==",
+                        "value": "left-right-positions"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": false,
+            "return_format": "string"
+        },
+        {
+            "key": "field_6053b7e60dd92",
+            "label": "Opacity",
+            "name": "right_top_overlay_opacity",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6058fdf7f37f7",
+                        "operator": "==",
+                        "value": "left-right-positions"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": 10,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6053b80f0dd94",
+            "label": "Width (% of screen)",
+            "name": "right_top_overlay_width",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6058fdf7f37f7",
+                        "operator": "==",
+                        "value": "left-right-positions"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_6053b81e0dd95",
+            "label": "Height",
+            "name": "right_top_overlay_height",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6058fdf7f37f7",
+                        "operator": "==",
+                        "value": "left-right-positions"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_60590801f37fe",
+            "label": "Right Bottom",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6058fdf7f37f7",
+                        "operator": "==",
+                        "value": "left-right-positions"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_60590812f37ff",
+            "label": "Right Bottom Color",
+            "name": "right_bottom_overlay_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6058fdf7f37f7",
+                        "operator": "==",
+                        "value": "left-right-positions"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": false,
+            "return_format": "string"
+        },
+        {
+            "key": "field_6059082af3800",
+            "label": "Opacity",
+            "name": "right_bottom_overlay_opacity",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6058fdf7f37f7",
+                        "operator": "==",
+                        "value": "left-right-positions"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": 10,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_60590854f3801",
+            "label": "Width (% of screen)",
+            "name": "right_bottom_overlay_width",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6058fdf7f37f7",
+                        "operator": "==",
+                        "value": "left-right-positions"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_60590869f3802",
+            "label": "Height",
+            "name": "right_bottom_overlay_height",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6058fdf7f37f7",
+                        "operator": "==",
+                        "value": "left-right-positions"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_6058f337f37f2",
+            "label": "Whole Section",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6058fdf7f37f7",
+                        "operator": "==",
+                        "value": "whole-section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6058f409f37f3",
+            "label": "Overlay Color",
+            "name": "whole_overlay_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6058fdf7f37f7",
+                        "operator": "==",
+                        "value": "whole-section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": false,
+            "return_format": "string"
+        },
+        {
+            "key": "field_6058f453f37f4",
+            "label": "Opacity",
+            "name": "whole_overlay_opacity",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6058fdf7f37f7",
+                        "operator": "==",
+                        "value": "whole-section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": 10,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "permalink",
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "page_attributes",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": false,
+    "modified": 1645649761
+}

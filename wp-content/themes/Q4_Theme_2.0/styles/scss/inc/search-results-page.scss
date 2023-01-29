@@ -1,0 +1,51 @@
+.search-results-wrapper {
+  width: 100%;
+  margin: 200px auto;
+  min-height: 300px;
+  .container {
+    max-width: none;
+  }
+  span.date,
+  span.author,
+  span.comments {
+    display: none;
+  }
+  h1 {
+    font-size: 50px;
+    color: $primary;
+    text-decoration: underline;
+    padding: 25px 10%;
+    margin-bottom: 25px;
+    @include mq(700px) {
+      padding: 0 5%;
+    }
+    @include mq(700px) {
+      font-size: 32px;
+    }
+  }
+  article {
+    a {
+      color: $black;
+      @include transition(500ms);
+      &:hover {
+        color: $primary;
+        @include transition(500ms);
+      }
+    }
+  }
+  article:nth-of-type(odd){
+    background: #e7e7e7;
+  }
+  h2 {
+    padding: 45px 12%;
+    font-size: 25px;
+    @include mq(700px){
+      padding: 45px 8%;
+    }
+  }
+  .post-edit-link {
+    position: relative;
+    top: -30px;
+    left: 12%;
+  }
+}
