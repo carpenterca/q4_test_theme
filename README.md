@@ -19,4 +19,4 @@ Create a filter with category checkboxes that automatically pull in all of the c
 Setup pagination for one of the post types to show only 3 posts at a time. Have the ability to move through the pagination as well
 
 ### Change the order of posts
-Add a button that will switch the posts' cronological order when clicked. If the first post is event 10, when the button is clicked it will now be event 1
+Add a button that will switch the posts' chronological order when clicked. If the first post is event 10, when the button is clicked it will now be event 1
