@@ -19,14 +19,39 @@ $default_preview_image = get_field('default_preview_image', $taxonomy_and_id);
 $card_elements = get_field('archive_page_card_elements', $taxonomy_and_id); // $card_elements grabs all selected options from News Menu -> Archive Page Options. Whatever is selected will be echoed out in .news-contents
 
 
+// First let's check if the order was changed by the user
+$active_order = isset($_GET['order']) ? $_GET['order'] : 'DESC';
 
-// Query for all News Posts
+// Query for all News and Events Posts
 $args = array(
-    'post_type' => 'news',
+    'post_type' => array('news', 'events'),
     'posts_per_page' => -1,
     'orderby' => 'date',
-    'order'   => 'DESC'
+    'order'   => $active_order
 );
+
+// Create an array of all the url categories search parameters
+// This will later be sent to the news-filter.php template part
+$active_category_filters = isset($_GET['categories']) ? $_GET['categories'] : '';
+$active_category_filters = array_filter( explode(',', $active_category_filters) );
+
+// Select only the posts that have categories if the search params are not empty
+if ( !empty($active_category_filters) ) {
+    $args['tax_query'] = array(
+        'relation' => 'OR',
+        array(
+            'taxonomy' => 'news_categories',
+            'field' => 'slug',
+            'terms' => $active_category_filters,
+        ),
+        array(
+            'taxonomy' => 'events_categories',
+            'field' => 'slug',
+            'terms' => $active_category_filters,
+        ),
+    );
+}
+
 $news_posts = get_posts($args);
 
 
@@ -62,15 +87,60 @@ echo '<div id="news-archive">';
 
     // news filter
     echo '<div class="news-filter">';
-    get_template_part('inc/news-filter', null, null);
+    echo '<div class="container">';
+
+    // Send the search params to the checkboxes to include them as the currently active search results
+    $template_args = array(
+        'activeCategories' => $active_category_filters,
+    );
+    get_template_part('inc/news-filter', null, $template_args);
+
     echo '</div>';
+    echo '</div>';
+
+
+    // news filter
+    echo '<div class="news-order">';
+    echo '<div class="container">';
+
+    echo '<button id="order-btn" type="button" role="button" onclick="reversePosts();" current-order="'. $active_order .'">Reverse Posts Order</button>';
+
+    ?>
+    <script>
+        function reversePosts() {
+            // Let's find the current button value
+            var button = document.getElementById('order-btn');
+            var orderValue = button.getAttribute('current-order');
+
+            // Now let's reverse it
+            switch (orderValue) {
+                case "DESC":
+                    orderValue = "ASC";
+                    break;
+                case "ASC":
+                    orderValue = "DESC";
+                    break;
+                default:
+                    break;
+            }
+
+            // Now we can add that parameter to the URL and reload
+            var url = new URL(window.location.href);
+            var params = new URLSearchParams(url.search.slice(1));
+            params.set('order', orderValue);
+            window.location.href = url.pathname + '?' + params.toString();
+        }
+    </script>
+    <?php
+
+    echo '</div>';
+    echo '</div>';
+
 
 
     //[start] news results wrapper and container
     echo '<div class="news-results">';
     echo '<div class="container">';
-
-
 
 
     // loop through all posts and print them
@@ -155,8 +225,7 @@ echo '<div id="news-archive">';
     echo '</div>'; // [end] news results container
     echo '</div>'; // [end] news results wrapper
 echo '</div>'; // [end] News Archive Section Wrapper
+
+
 get_footer(); 
-
-
-
 ?>
